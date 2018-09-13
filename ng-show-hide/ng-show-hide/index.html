@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="showHideDemo">
+<head>
+	<meta charset="utf-8" />
+	<title>AngularJS ngShow ngHide Directive</title>
+	<meta content="width=device-width" name="viewport" />
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" >
+</head>
+<body >
+<div class="container">
+	<div class="well" ng-controller="showHideController">
+	<div class="chooseLib">
+		<label ng-repeat="lib in libs"><input type="checkbox" ng-model="lib.checked">{{lib.name}}</label>
+	</div>
+	<ul class="libs">
+		<li ng-repeat="lib in libs" ng-show="lib.checked"><span class="glyphicon glyphicon-ok"></span>{{lib.name}}</li>
+	</ul>
+	
+	</div>
+	
+</div>
+
+<!-- Script files-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
